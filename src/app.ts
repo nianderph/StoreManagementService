@@ -31,7 +31,7 @@ app.get('/', (req: Request, res: Response) => {
     res.send('Express + TypeScript Server');
   });
 function listen(){
-    const port:number = parseInt(process.env.port_number, 10);
+    const port:number = parseInt(process.env.port_number, 10) || 3001;
     app.listen(port, () => {
         console.log(`⚡️[server]: Server is running at http://localhost:${port}`)
     })
